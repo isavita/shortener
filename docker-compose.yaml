@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:6.0.9-alpine
+    ports:
+      - 6379:6379
+  mongo:
+    image: mongo:4.4.1-bionic
+    restart: always
+    ports:
+      - 27017:27017
+# export URL_DB=redis
+# export REDIS_URL=redis://localhost:6379
+# export URL_DB=mongo
+# export MONGO_DB=shortener
+# export MONGO_URL=mongodb://localhost:27017/shortener
+# export MONGO_TIMEOUT=30
